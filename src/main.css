@@ -1,0 +1,72 @@
+@import 'tailwindcss';
+
+@view-transition {
+	navigation: auto;
+}
+
+@font-face {
+	font-family: 'Manrope';
+	font-style: normal;
+	font-weight: 200 800;
+	font-display: 'swap';
+	src: url(/manrope-200-800-normal.woff2) format('woff2');
+}
+
+@font-face {
+	font-family: 'Playfair Display';
+	font-style: normal;
+	font-weight: 400 900;
+	font-display: 'swap';
+	src: url(/playfair-display-400-900-normal.woff2) format('woff2');
+}
+
+@theme {
+	--default-transition-duration: 0.3s;
+	--font-sans: 'Manrope', sans-serif;
+	--font-serif: 'Playfair Display', sans-serif;
+	--breakpoint-sm: 28rem;
+	--breakpoint-md: 48rem;
+	--breakpoint-lg: 64rem;
+	--breakpoint-xl: 80rem;
+	--breakpoint-2xl: initial;
+	--color-lime-300: #f7ff14;
+}
+
+@layer base {
+	html {
+		@apply antialiased max-[400px]:text-[4vw] min-[1536px]:text-[1.125vw] min-[1920px]:text-[20px];
+	}
+}
+
+@layer components {
+	[class*='reveal:'] {
+		@apply group-revealed:transition-all group-revealed:duration-1000 revealed:transition-all revealed:duration-1000;
+	}
+}
+
+@utility container {
+	@apply mx-auto px-6 md:px-12;
+}
+
+@custom-variant reveal (&.reveal);
+@custom-variant revealed (&.revealed);
+
+@supports (animation-timeline: view()) {
+	@keyframes scroll-move {
+		to {
+			transform: translateX(-700vw);
+		}
+	}
+	@media (width >= 80rem) {
+		#scroll-container {
+			@apply h-[800vw];
+			view-timeline-name: --scroll-container;
+		}
+		#scroll-wrapper {
+			@apply sticky top-0 grid w-[800vw] grid-cols-8 will-change-transform;
+			animation: linear scroll-move forwards;
+			animation-timeline: --scroll-container;
+			animation-range: contain 0% contain 100%;
+		}
+	}
+}

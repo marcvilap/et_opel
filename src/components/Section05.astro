@@ -1,0 +1,45 @@
+---
+import { Image } from 'astro:assets'
+import img04 from '@/assets/images/image-04.webp'
+import img05 from '@/assets/images/image-05.webp'
+---
+
+<section class="flex min-h-screen items-center bg-neutral-100 py-12">
+	<div class="group reveal container">
+		<div class="grid items-center gap-12 md:grid-cols-2 xl:gap-24">
+			<div class="space-y-6 group-reveal:translate-y-24 group-reveal:opacity-0 group-revealed:delay-100">
+				<h2 class="relative pl-24 font-serif text-5xl">
+					<span class="absolute bottom-0 left-0 font-sans text-[12rem] font-black opacity-10">02</span>
+					<span>Ruta de los</span>
+					<em class="block opacity-50">Pueblos Blancos</em>
+				</h2>
+				<p>El <strong>Día 2</strong> conviene llevar la mente despejada. Si te gusta conducir, este será uno de esos días que se recuerdan con una sonrisa.</p>
+				<p>
+					Toca adentrarse en la <strong>ruta de los Pueblos Blancos</strong>, un recorrido de carreteras secundarias donde el paisaje manda y cada curva invita
+					a seguir un poco más.
+				</p>
+				<blockquote class="border-l-4 border-lime-300 pl-6 italic">
+					<p>Grazalema, uno de los pueblos más lluviosos de España.</p>
+					<p>Setenil de las Bodegas, con sus casas bajo la roca.</p>
+					<p>Zahara de la Sierra, con vistas de postal.</p>
+				</blockquote>
+				<div class="bg-lime-300 p-6">
+					<h3 class="font-bold uppercase">Un trayecto Curva va, curva viene</h3>
+					<p>
+						Escenario perfecto para apreciar la <strong>agilidad del Opel Corsa Hybrid</strong>. Su consumo contenido incluso en tramos exigentes: hasta <strong
+							>5,9 L/100 km en ciclo mixto</strong
+						>.
+					</p>
+				</div>
+			</div>
+			<div class="group-reveal:translate-y-24 group-reveal:opacity-0 group-revealed:delay-200">
+				<div class="relative z-1 pl-6 xl:pl-32">
+					<Image class="rounded" src={img04} width={520} densities={[2]} alt="" />
+				</div>
+				<div class="-mt-6 pr-6 xl:-mt-12 xl:pr-32">
+					<Image class="rounded" src={img05} width={520} densities={[2]} alt="" />
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

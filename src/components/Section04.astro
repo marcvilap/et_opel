@@ -1,0 +1,21 @@
+---
+import { Image } from 'astro:assets'
+import img03 from '@/assets/images/image-03.webp'
+import SvgIcon from '@/assets/icons/icon.svg'
+---
+
+<section class="relative flex items-center bg-lime-300 py-12 xl:min-h-screen">
+	<Image class="absolute top-0 left-0 size-full object-cover opacity-20" src={img03} alt="" />
+	<div class="group reveal container space-y-6 text-center">
+		<SvgIcon class="mx-auto w-6 opacity-50" />
+		<h2 class="mx-auto max-w-4xl font-serif text-5xl group-reveal:translate-y-24 group-reveal:opacity-0 group-revealed:delay-100">
+			Llegar a <em class="opacity-50">Ronda</em> al atardecer compensa cada kilómetro del camino.
+		</h2>
+		<p class="mx-auto max-w-2xl text-lg group-reveal:translate-y-24 group-reveal:opacity-0 group-revealed:delay-200">
+			La ciudad, colgada sobre el Tajo, regala una de esas imágenes que se quedan grabadas para siempre.
+		</p>
+		<p class="mx-auto max-w-2xl font-serif text-lg italic group-reveal:translate-y-24 group-reveal:opacity-0 group-revealed:delay-300">
+			Callejear sin rumbo fijo, tapeo improvisado y descanso merecido. Porque lo mejor, como suele pasar en los buenos viajes, aún está por venir.
+		</p>
+	</div>
+</section>

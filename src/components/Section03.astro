@@ -1,0 +1,40 @@
+---
+import { Image } from 'astro:assets'
+import img02 from '@/assets/images/image-02.jpg'
+---
+
+<section class="flex items-center bg-gray-100 py-12 xl:min-h-screen">
+	<div class="group reveal container">
+		<div class="group-reveal:translate-y-24 group-reveal:opacity-0 group-revealed:delay-100">
+			<p class="mb-6 text-center">
+				<span class="inline-block bg-black px-2 py-1 text-xs font-bold text-lime-300 uppercase">Primer Tip</span>
+			</p>
+			<h2 class="relative flex flex-col justify-center text-center font-serif text-5xl">
+				<span class="absolute left-0 font-sans text-[12rem] font-black opacity-10">01</span>
+				<span>Primer tip para lograr un viaje de éxito:</span>
+				<em class="opacity-50">planifica tu recorrido</em>
+			</h2>
+		</div>
+
+		<div class="mt-12 grid items-center gap-12 md:grid-cols-2 xl:gap-24">
+			<div class="group-reveal:translate-y-24 group-reveal:opacity-0 group-revealed:delay-200">
+				<Image class="aspect-3/2 w-full rounded object-cover" src={img02} width={680} densities={[2]} alt="" />
+			</div>
+			<div class="space-y-6 group-reveal:translate-y-24 group-reveal:opacity-0 group-revealed:delay-300">
+				<p>
+					El plan arranca fuerte el <strong>Día 1</strong>, con un trayecto largo (pero agradable) desde Barcelona hasta Ronda: unos <strong>500 km</strong> que se
+					disfrutan mucho más cuando cuentas con tecnologías pensadas para reducir el estrés al volante.
+				</p>
+				<p>
+					Aquí el Opel Corsa Hybrid juega un papel clave: su conducción suave, la respuesta equilibrada del motor <strong>1.2 Hybrid de 136 CV</strong>, la
+					conectividad que te mantiene siempre orientado y sistemas como los <strong>faros IntelliLux</strong> convierten las horas de carretera en un viaje cómodo
+					y relajado.
+				</p>
+				<blockquote class="border-l-4 border-lime-300 bg-white p-6">
+					<p>Incluso cuando cae la noche, la iluminación adaptativa marca la diferencia.</p>
+					<p><strong>Y si el cuerpo lo agradece, mejor aún: viajar cómodo es empezar bien la aventura.</strong></p>
+				</blockquote>
+			</div>
+		</div>
+	</div>
+</section>

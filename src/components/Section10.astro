@@ -1,0 +1,30 @@
+---
+import { Image } from 'astro:assets'
+import img08 from '@/assets/images/image-08.webp'
+---
+
+<section class="relative flex items-center bg-lime-300 py-12 xl:min-h-screen">
+	<Image class="absolute bottom-0 left-0 w-80 max-xl:hidden" src={img08} width={320} densities={[2]} alt="" />
+
+	<div class="group reveal relative container">
+		<div class="space-y-6 text-center">
+			<h2 class="font-serif text-5xl text-balance italic group-reveal:translate-y-24 group-reveal:opacity-0 group-revealed:delay-100">
+				Te hemos puesto los dientes largos, lo sabemos. ¡La culpa es del planazo, no nuestra!
+			</h2>
+			<p class="text-balance group-reveal:translate-y-24 group-reveal:opacity-0 group-revealed:delay-200">
+				Seguro que ya estás pensando: “vale, ¿y ahora qué?”. Aquí va una idea sencilla: <strong>reserva un test drive en tu concesionario Opel</strong> y empieza
+				a imaginar tu propio carnaval sobre ruedas. Febrero es el momento perfecto para hacerlo realidad.
+			</p>
+			<h3 class="text-4xl font-black text-balance group-reveal:translate-y-24 group-reveal:opacity-0 group-revealed:delay-300 md:text-6xl">
+				Haz de febrero tu carnaval sobre ruedas con Opel.
+			</h3>
+			<p class="my-12 group-reveal:translate-y-24 group-reveal:opacity-0 group-revealed:delay-400">
+				<a class="inline-block bg-black px-6 py-3 text-white uppercase transition-transform hover:scale-95" href="">Reserva tu Test Drive</a>
+			</p>
+			<p class="group-reveal:translate-y-24 group-reveal:opacity-0 group-revealed:delay-500">
+				<span class="block font-serif font-bold">Fiesta, aventura y cero preocupaciones te esperan al volante del Opel Corsa Hybrid.</span>
+				<span>Y créenos: en la práctica, es incluso mejor de lo que imaginas.</span>
+			</p>
+		</div>
+	</div>
+</section>

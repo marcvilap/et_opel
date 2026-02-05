@@ -1,0 +1,35 @@
+---
+import { Image } from 'astro:assets'
+import img01 from '@/assets/images/image-01.jpg'
+---
+
+<section class="bg-black py-12 text-white xl:min-h-screen">
+	<div class="group reveal container">
+		<div class="grid gap-12 md:grid-cols-2 xl:gap-24">
+			<div class="space-y-6 group-reveal:-translate-x-24 group-reveal:opacity-0">
+				<h2 class="font-serif text-4xl">Febrero es tiempo de Carnaval y sinónimo de alegría.</h2>
+				<p class="text-neutral-400">
+					Concretamente, del 8 al 18 de este mes, la <strong>Sierra de Grazalema</strong> y los <strong>Pueblos Blancos de Cádiz</strong> se llenan de visitantes
+					que, ataviados con sus galas más rocambolescas, viajan al sur en busca de la más dichosa de las celebraciones: el Carnaval.
+				</p>
+				<p class="text-neutral-400">
+					Una combinación mágica de música, color, ironía y baile que se vive en la calle, sin filtros y con una energía difícil de explicar si no se
+					experimenta en primera persona.
+				</p>
+			</div>
+			<div class="group-reveal:translate-x-24 group-reveal:opacity-0">
+				<blockquote class="space-y-6 border-l-4 border-lime-300 bg-neutral-800 p-6">
+					<h3 class="text-xl">
+						¿Tienes todo listo para escaparte a un road trip que combine naturaleza, curvas infinitas, disfraces y la mejor de las fiestas?
+					</h3>
+					<p>
+						El <span class="text-lime-300">Opel Corsa Hybrid</span> no solo lo hace posible, sino que te asegura un fiel compañero de aventuras con eficiencia híbrida
+						y garantía Opel de hasta 8 años o 160.000 km.
+					</p>
+					<p class="font-bold text-lime-300 uppercase">Porque cuando el plan es bueno, el coche tiene que estar a la altura.</p>
+				</blockquote>
+			</div>
+		</div>
+		<Image class="mt-12 w-full rounded group-reveal:scale-75 group-reveal:opacity-0 xl:mt-24" src={img01} width={1480} alt="" />
+	</div>
+</section>

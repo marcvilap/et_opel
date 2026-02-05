@@ -1,0 +1,39 @@
+---
+import '../main.css'
+import NavElTiempo from '@/components/NavElTiempo.astro'
+import Head from '@/components/Head.astro'
+import Header from '@/components/Header.astro'
+import Footer from '@/components/Footer.astro'
+
+const metaTitle = 'El Tiempo'
+const metaDescription = ''
+---
+
+<!doctype html>
+<html lang="es-ES">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="robots" content="noindex,nofollow" />
+		<title>{metaTitle}</title>
+		<meta property="description" content={metaDescription} />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="/" />
+		<meta property="og:image" content="/thumbnail.png" />
+		<meta property="og:title" content={metaTitle} />
+		<meta property="og:description" content={metaDescription} />
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:image" content="/thumbnail.png" />
+		<meta property="twitter:title" content={metaTitle} />
+		<meta property="twitter:description" content={metaDescription} />
+		<link rel="icon" href="/favicon.png" />
+		<Head />
+	</head>
+	<body>
+		<NavElTiempo />
+		<Header />
+		<slot />
+		<Footer />
+		<script src="../main.ts"></script>
+	</body>
+</html>

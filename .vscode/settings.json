@@ -1,0 +1,7 @@
+{
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnSave": true,
+	"files.associations": { "*.css": "tailwindcss" },
+	"prettier.documentSelectors": ["**/*.astro"],
+	"search.exclude": { "bun.lock": true }
+}

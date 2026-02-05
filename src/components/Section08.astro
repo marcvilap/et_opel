@@ -1,0 +1,43 @@
+---
+import videoCorsa from '@/assets/videos/corsa.mp4'
+---
+
+<section class="flex items-center bg-neutral-200 py-12 xl:min-h-screen">
+	<div class="group reveal container">
+		<div class="mb-6 grid items-center gap-12 md:grid-cols-2 xl:gap-24">
+			<div class="space-y-6 group-reveal:translate-y-24 group-reveal:opacity-0 group-revealed:delay-100">
+				<p>
+					<span class="inline-block bg-black px-2 py-1 text-xs font-bold text-lime-300 uppercase">Segundo Tip</span>
+				</p>
+				<h2 class="font-serif text-5xl">Deja tiempo para la <em class="opacity-50">improvisación</em></h2>
+				<p>
+					La parte de improvisar planes a lo largo del road trip es algo que recomendamos no saltarte. Tener un itinerario base ayuda a estructurar el viaje,
+					sí, pero esta escapada pide a gritos dejar huecos para lo inesperado.
+				</p>
+				<p>Parar si el paisaje lo merece. Desviarte cuando alguien diga: “oye, ¿y si vamos por allí a ver qué hay?”.</p>
+				<p>
+					En la ruta de los <strong>Pueblos Blancos</strong>, improvisar es casi obligatorio. Baja el ritmo, compra pan recién hecho, queso o embutido local y
+					monta un picnic improvisado junto al <strong>embalse de Zahara</strong>, con la sierra como telón de fondo.
+				</p>
+			</div>
+			<div class="space-y-6 rounded bg-white p-6 group-reveal:translate-y-24 group-reveal:opacity-0 group-revealed:delay-200">
+				<p>
+					El <a class="font-bold underline" target="_blank" href="https://www.opel.es/content/opel/worldwide/spain/es/index/coches/gama-corsa/nuevo-corsa/"
+						>Opel Corsa Hybrid</a
+					>, compacto y fácil de maniobrar, te permite parar donde otros no se atreverían, encontrar huecos imposibles y retomar la marcha sin complicaciones.
+				</p>
+				<video class="w-full rounded" src={videoCorsa} autoplay loop muted playsinline></video>
+			</div>
+		</div>
+
+		<div class="space-y-3 rounded bg-black p-6 text-center text-white group-reveal:translate-y-24 group-reveal:opacity-0 group-revealed:delay-300">
+			<p class="font-serif text-xl">
+				También puedes detenerte en miradores sin nombre, bares de carretera con aspecto humilde (pero cocina memorable) o incluso playas casi vacías si el
+				tiempo acompaña.
+			</p>
+			<p class="text-neutral-400">
+				En invierno, Andalucía suele regalar días luminosos, y viajar con un coche eficiente te permite disfrutar sin estar pendiente del consumo.
+			</p>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,30 @@
+---
+import { Image } from 'astro:assets'
+import img07 from '@/assets/images/image-07.webp'
+---
+
+<section class="relative flex items-center bg-black py-12 text-white xl:min-h-screen">
+	<span class="absolute -top-12 -right-12 size-120 rounded-full bg-radial from-lime-300/25 via-transparent to-transparent"></span>
+	<div class="group reveal container">
+		<div class="grid items-center gap-12 md:grid-cols-2 xl:gap-24">
+			<div class="group-reveal:translate-y-24 group-reveal:opacity-0 group-revealed:delay-100">
+				<Image class="aspect-square rounded object-cover" src={img07} width={520} densities={[2]} alt="" />
+			</div>
+			<div class="space-y-6 group-reveal:translate-y-24 group-reveal:opacity-0 group-revealed:delay-200">
+				<h2 class="relative font-serif text-6xl">
+					<span class="absolute right-24 bottom-0 font-sans text-[12rem] font-black opacity-10">03</span>
+					<span>Cádiz te Transforma</span>
+				</h2>
+				<p class="text-neutral-400">
+					El <strong>Día 3</strong>, por fin, llegas a <strong>Cádiz</strong>. Y Cádiz te transforma. Porque el Carnaval no se mira: <strong
+						>se vive con los cinco sentidos</strong
+					>. El sonido de las chirigotas callejeras, la paleta de color que se forma a raíz de los miles de disfraces improvisados —o preparados con meses de
+					antelación y que, por cierto, caben sin problema en los 309 litros de maletero del Opel Corsa, ampliables hasta 1.112 litros—, el humor flotando en el
+					ambiente, las bromas cruzándose entre desconocidos…
+				</p>
+				<p class="text-neutral-400">Es un tiempo en el que todo parece más ligero. Donde se puede ser un poco más libre.</p>
+				<p class="font-serif text-2xl text-lime-300 italic">Un poco más tú.</p>
+			</div>
+		</div>
+	</div>
+</section>
