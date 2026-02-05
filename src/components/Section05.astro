@@ -7,9 +7,9 @@ import img05 from '@/assets/images/image-05.webp'
 <section class="flex min-h-screen items-center bg-neutral-100 py-12">
 	<div class="group reveal container">
 		<div class="grid items-center gap-12 md:grid-cols-2 xl:gap-24">
-			<div class="space-y-6 group-reveal:translate-y-24 group-reveal:opacity-0 group-revealed:delay-100">
+			<div class="space-y-6 group-reveal:translate-y-24 group-reveal:opacity-0 group-revealed:delay-100 parallax-text">
 				<h2 class="relative pl-24 font-serif text-5xl">
-					<span class="absolute bottom-0 left-0 font-sans text-[12rem] font-black opacity-10">02</span>
+					<span class="absolute bottom-0 left-0 font-sans text-[12rem] font-black opacity-10 parallax-slow">02</span>
 					<span>Ruta de los</span>
 					<em class="block opacity-50">Pueblos Blancos</em>
 				</h2>
@@ -34,10 +34,10 @@ import img05 from '@/assets/images/image-05.webp'
 			</div>
 			<div class="group-reveal:translate-y-24 group-reveal:opacity-0 group-revealed:delay-200">
 				<div class="relative z-1 pl-6 xl:pl-32">
-					<Image class="rounded" src={img04} width={520} densities={[2]} alt="" />
+					<Image class="rounded parallax-fast" src={img04} width={520} densities={[2]} alt="" />
 				</div>
 				<div class="-mt-6 pr-6 xl:-mt-12 xl:pr-32">
-					<Image class="rounded" src={img05} width={520} densities={[2]} alt="" />
+					<Image class="rounded parallax-slow" src={img05} width={520} densities={[2]} alt="" />
 				</div>
 			</div>
 		</div>

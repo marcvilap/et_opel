@@ -34,7 +34,7 @@
 
 @layer base {
 	html {
-		@apply antialiased max-[400px]:text-[4vw] min-[1536px]:text-[1.125vw] min-[1920px]:text-[20px];
+		@apply scroll-smooth antialiased max-[400px]:text-[4vw] min-[1536px]:text-[1.125vw] min-[1920px]:text-[20px];
 	}
 }
 
@@ -57,6 +57,38 @@
 			transform: translateX(-700vw);
 		}
 	}
+	@keyframes parallax-slow {
+		from {
+			transform: translateX(15vw);
+		}
+		to {
+			transform: translateX(-15vw);
+		}
+	}
+	@keyframes parallax-fast {
+		from {
+			transform: translateX(-15vw);
+		}
+		to {
+			transform: translateX(15vw);
+		}
+	}
+	@keyframes parallax-bg {
+		from {
+			transform: translateX(8vw);
+		}
+		to {
+			transform: translateX(-8vw);
+		}
+	}
+	@keyframes parallax-text {
+		from {
+			transform: translateX(6vw);
+		}
+		to {
+			transform: translateX(-6vw);
+		}
+	}
 	@media (width >= 80rem) {
 		#scroll-container {
 			@apply h-[800vw];
@@ -64,7 +96,27 @@
 		}
 		#scroll-wrapper {
 			@apply sticky top-0 grid w-[800vw] grid-cols-8 will-change-transform;
-			animation: linear scroll-move forwards;
+			animation: ease-out scroll-move forwards;
+			animation-timeline: --scroll-container;
+			animation-range: contain 0% contain 100%;
+		}
+		.parallax-slow {
+			animation: ease-out parallax-slow forwards;
+			animation-timeline: --scroll-container;
+			animation-range: contain 0% contain 100%;
+		}
+		.parallax-fast {
+			animation: ease-out parallax-fast forwards;
+			animation-timeline: --scroll-container;
+			animation-range: contain 0% contain 100%;
+		}
+		.parallax-bg {
+			animation: ease-out parallax-bg forwards;
+			animation-timeline: --scroll-container;
+			animation-range: contain 0% contain 100%;
+		}
+		.parallax-text {
+			animation: ease-out parallax-text forwards;
 			animation-timeline: --scroll-container;
 			animation-range: contain 0% contain 100%;
 		}
