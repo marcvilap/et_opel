@@ -20,10 +20,19 @@
 	src: url(/playfair-display-400-900-normal.woff2) format('woff2');
 }
 
+@font-face {
+	font-family: 'Unbounded';
+	font-style: normal;
+	font-weight: 200 900;
+	font-display: 'swap';
+	src: url(/unbounded-200-900-normal.woff2) format('woff2');
+}
+
 @theme {
 	--default-transition-duration: 0.3s;
 	--font-sans: 'Manrope', sans-serif;
 	--font-serif: 'Playfair Display', sans-serif;
+	--font-display: 'Unbounded', sans-serif;
 	--breakpoint-sm: 28rem;
 	--breakpoint-md: 48rem;
 	--breakpoint-lg: 64rem;
